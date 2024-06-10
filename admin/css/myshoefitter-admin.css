@@ -1,0 +1,53 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+ .wrap {
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.13);
+}
+
+.content {
+  max-width: 900px;
+}
+
+.banner {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.logo {
+  width: 160px;
+}
+
+.badge {
+  padding: 5px;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.enabled {
+  color: #4CAF50;
+}
+
+.disabled {
+  color: #F44336;
+}
+
+.list {
+  list-style: none;
+}
+
+.list li {
+  margin-bottom: 10px;
+}
+
+.list p {
+  margin: 0;
+  opacity: 0.6;
+}
