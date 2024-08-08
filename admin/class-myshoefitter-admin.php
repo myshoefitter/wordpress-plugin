@@ -111,7 +111,7 @@ class myShoefitter_Admin
 ?>
     <div class="wrap">
       <div class="content">
-        <img src="<?php echo plugin_dir_url(__FILE__) . 'assets/banner.png'; ?>" alt="mySHOEFITTER Banner" class="banner" />
+        <img src="<?php echo esc_url( plugin_dir_url(__FILE__) . 'assets/banner.png' ); ?>" alt="mySHOEFITTER Banner" class="banner" />
         <h2>Introduction</h2>
         <p>
           mySHOEFITTER is an innovative web software designed to revolutionize the way you shop for footwear online. Through advanced technology, we allow customers to accurately <b>determine their perfect shoe size</b> from the comfort of their own home.
@@ -129,15 +129,15 @@ class myShoefitter_Admin
         <ul class="list">
         <li>
           <strong>WooCommerce installed:</strong>
-          <span class="badge <?php echo class_exists( 'WooCommerce' ) ? 'enabled' : 'disabled'; ?>">
-            <?php echo class_exists( 'WooCommerce' ) ? 'Yes' : 'No'; ?>
+          <span class="badge <?php echo esc_attr( class_exists('WooCommerce') ? 'enabled' : 'disabled' ); ?>">
+            <?php echo esc_html( class_exists('WooCommerce') ? 'Yes' : 'No' ); ?>
           </span>
           <p>Checks if WooCommerce is installed for eCommerce features.</p>
           </li>
           <li>
             <strong>REST API enabled:</strong>
-            <span class="badge <?php echo rest_url() ? 'enabled' : 'disabled'; ?>">
-              <?php echo rest_url() ? 'Yes' : 'No'; ?>
+            <span class="badge <?php echo esc_attr( rest_url() ? 'enabled' : 'disabled' ); ?>">
+              <?php echo esc_html( rest_url() ? 'Yes' : 'No' ); ?>
             </span>
             <p><b>Optional!</b> Verifies that the REST API is accessible.</p>
           </li>
@@ -153,7 +153,7 @@ class myShoefitter_Admin
 
         <div style="height: 20px;"></div>
 
-        <a href="https://myshoefitter.com/?utm_source=wp-plugin" class="button-primary" target="_black">Visit mySHOEFITTER Website</a>
+        <a href="https://myshoefitter.com/en/?utm_source=wp-plugin" class="button-primary" target="_black"><?php esc_html_e( 'Visit mySHOEFITTER Website', 'myshoefitter' ); ?></a>
       </div>
     </div>
 <?php
