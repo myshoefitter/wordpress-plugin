@@ -52,9 +52,6 @@ class myShoefitter_Public {
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
 
-    // Hook into the footer to add custom scripts
-    add_action('wp_footer', array($this, 'add_myshoefitter_script'), 100);
-
 	}
 
 	/**
@@ -108,22 +105,21 @@ class myShoefitter_Public {
      *
      * @since    1.0.0
      */
-  public function add_myshoefitter_script() {
-    if ( class_exists( 'WooCommerce' ) ) {
-      if ( is_woocommerce() || is_cart() || is_checkout() || is_account_page() ) {
-        ?>
-          <!-- Load the mySHOEFITTER Script -->
-          <script src="http://localhost:3000/script.ts"></script>
-  
-          <!-- Initialize mySHOEFITTER -->
-          <script type="application/javascript">
+    public function add_myshoefitter_script() {
+      if ( class_exists( 'WooCommerce' ) ) {
+        if ( is_woocommerce() || is_cart() || is_checkout() || is_account_page() ) {
+          // Register and enqueue the external script with the 'true' parameter to load it in the footer
+          wp_enqueue_script( 'myshoefitter-external', 'https://js.myshoefitter.com/v1/script.js', array(), null, true );
+    
+          // Add the inline script to initialize myshoefitter
+          $inline_script = "
             myshoefitter.init({
               shopSystem: 'woocommerce'
             });
-          </script>
-        <?php
+          ";
+          wp_add_inline_script( 'myshoefitter-external', $inline_script );
+        }
       }
-    }
-  }
+    }    
 
 }
