@@ -20,6 +20,11 @@ Beyond providing convenience to customers, mySHOEFITTER also offers significant 
 
 https://cdn.myshoefitter.com/videos%2FmySHOEFITTER%20WDR%20(no%20Intro).mp4
 
+= Third-Party Services =
+
+The mySHOEFITTER plugin relies on a third-party service to enhance its functionality. This service is integral to providing the best possible user experience and ensuring the smooth operation of the plugin. Specifically, the plugin makes requests to the following resource: [https://js.myshoefitter.com/v1/script.js](https://js.myshoefitter.com/v1/script.js)
+For more information see our [privacy policy](https://en.myshoefitter.com/datenschutz).
+
 == Installation ==
 
 = Minimum Requirements =
