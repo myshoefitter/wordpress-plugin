@@ -41,7 +41,7 @@ define( 'MYSHOEFITTER_VERSION', '1.0.0' );
  * The code that runs during plugin activation.
  * This action is documented in includes/class-myshoefitter-activator.php
  */
-function activate_plugin_name() {
+function activate_myshoefitter() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-myshoefitter-activator.php';
 	myShoefitter_Activator::activate();
 }
@@ -50,13 +50,13 @@ function activate_plugin_name() {
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-myshoefitter-deactivator.php
  */
-function deactivate_plugin_name() {
+function deactivate_myshoefitter() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-myshoefitter-deactivator.php';
 	myShoefitter_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_plugin_name' );
-register_deactivation_hook( __FILE__, 'deactivate_plugin_name' );
+register_activation_hook( __FILE__, 'activate_myshoefitter' );
+register_deactivation_hook( __FILE__, 'deactivate_myshoefitter' );
 
 /**
  * The core plugin class that is used to define internationalization,
@@ -73,10 +73,10 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-myshoefitter.php';
  *
  * @since    1.0.0
  */
-function run_plugin_name() {
+function run_myshoefitter() {
 
 	$plugin = new myShoefitter();
 	$plugin->run();
 
 }
-run_plugin_name();
+run_myshoefitter();
